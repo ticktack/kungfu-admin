@@ -1,0 +1,7 @@
+# 配置 undertow
+
+undertow.devMode=true
+undertow.host=0.0.0.0
+undertow.port=9000
+#
+undertow.hotSwapClassPrefix=com.lastb7.swagger.,org.kungfu.

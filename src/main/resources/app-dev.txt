@@ -1,0 +1,12 @@
+# config
+mysql.url=jdbc:mysql://127.0.0.1:3306/youya_gen?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+mysql.username=root
+mysql.password=Mysql_20210513
+
+devMode=true
+deploy.env=local
+
+isLocal=true
+
+ak=lfHelaF6dgSgPVfozW1ApeIke0XPryLL
+

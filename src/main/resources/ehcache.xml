@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="false" monitoring="autodetect"
+         dynamicConfig="true">
+         
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+             maxElementsInMemory="10000"
+             maxElementsOnDisk="0"
+             eternal="true"
+             overflowToDisk="true"
+              diskPersistent="false"
+             timeToIdleSeconds="0"
+             timeToLiveSeconds="0"
+             diskSpoolBufferSizeMB="50"
+             diskExpiryThreadIntervalSeconds="120"
+             memoryStoreEvictionPolicy="LFU"
+        />
+    <!-- 菜单树 -->
+    <cache name="sysMenu"
+           maxEntriesLocalHeap="90000"
+           eternal="false"
+           timeToIdleSeconds="1800"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+    />
+
+    <!-- 业务字典-->
+    <cache name="sysDict"
+           maxEntriesLocalHeap="90000"
+           eternal="false"
+           timeToIdleSeconds="1800"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+    />
+
+    <!-- 部门树 -->
+    <cache name="sysOrg"
+           maxEntriesLocalHeap="90000"
+           eternal="false"
+           timeToIdleSeconds="1800"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+    />
+
+    <!-- 角色树-->
+    <cache name="sysRole"
+           maxEntriesLocalHeap="90000"
+           eternal="false"
+           timeToIdleSeconds="1800"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+    />
+
+    <!-- IP地址-->
+    <cache name="ipAddress"
+           maxEntriesLocalHeap="90000"
+           eternal="false"
+           timeToIdleSeconds="1800"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+    />
+
+</ehcache>

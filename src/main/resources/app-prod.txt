@@ -1,0 +1,15 @@
+# config
+
+mysql.url=jdbc:mysql://127.0.0.1:7229/kungfu_admin?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+mysql.username=yyys
+mysql.password=aaabbbccc
+
+devMode=false
+
+ak=lfHelaF6dgSgPVfozW1ApeIke0XPryLL
+
+
+
+
+
+

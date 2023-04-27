@@ -8,5 +8,5 @@ deploy.env=local
 
 isLocal=true
 
-ak=lfHelaF6dgSgPVfozW1ApeIke0XPryLL
+ak=*****
 

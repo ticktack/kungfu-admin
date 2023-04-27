@@ -6,7 +6,8 @@ mysql.password=aaabbbccc
 
 devMode=false
 
-ak=lfHelaF6dgSgPVfozW1ApeIke0XPryLL
+# baidu-ip-translate-api.sign=your-sign-here
+ak=******
 
 
 

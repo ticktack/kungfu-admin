@@ -1,13 +1,14 @@
+
+
 # kungfu-admin
 
-A system management platform implemented using the Kungfu framework. Make kungfu-admin one of the best practice examples of the Kungfu framework.
+使用Kungfu框架实现的系统管理平台。将 kungfu-admin 打造成 Kungfu 框架的最佳实践案例之一。
 
-## Experience address
+## 体验地址
 https://admin.kungfu.wang/
 
-## Operating steps
-
-1. create MySQL database
+## 操作步骤
+1. 创建MySQL数据库
 ```shell
 create database database_name character set utf8mb4 collate utf8mb4_unicode_ci;
 
@@ -19,8 +20,8 @@ mysql -u username -p database_name < resources/sql/sys_init.sql
 
 ```
 
-2. project config
-update app-prod.txt with the correct database/username/password
+2. 项目配置
+   使用正确的数据库/用户名/密码更新app-prod.txt文件。
 
 ```shell
 # config
@@ -35,7 +36,7 @@ devMode=false
 # baidu-ip-translate-api.sign=your-sign-here
 ak=********
 ```
-update undertow.txt with the correct port\hot-swapping class
+使用正确的端口和热更新类更新undertow.txt文件。
 ```shell
 # config undertow
 
@@ -46,22 +47,22 @@ undertow.port=9090
 # outer hot swap class
 undertow.hotSwapClassPrefix=com.lastb7.swagger.,org.kungfu.
 ```
-3. package
+3. 打包
 
 ```shell
 mvn clean package -Dmaven.test.skip=true
 ```
 
-4. deploy
+4. 部署
 ```shell
 copy local/target/kungfu-admin-release/kungfu-admin to remote/data/deploy/
 ```
 
-5. run
+5. 运行
 
 ```shell
 ./start.sh
 ```
 
 
-Open source is not easy, please give it a thumbs up, favorite, and follow. thanks!
+开源不易，请点个赞，收藏和关注。谢谢！

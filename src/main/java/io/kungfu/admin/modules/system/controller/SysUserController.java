@@ -17,11 +17,6 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.kungfu.core.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 @Api(value = "系统用户表", tags = "系统用户表接口")
 @Path("/sys-user")
 public class SysUserController extends KungfuController {
@@ -48,17 +43,6 @@ public class SysUserController extends KungfuController {
     @ApiResCustom(ResultVO.class)
     public void queryPage() {
         QueryCondition qc = toDTO(QueryCondition.class);
-
-//        Map<String, Object> modelMap = qc.getModelMap() == null ? new HashMap<>() : qc.getModelMap();
-//        Map<String, String> queryTypeMap = qc.getQueryTypeMap() == null ? new HashMap<>() : qc.getQueryTypeMap();
-//        modelMap.put("userCode", "admin");
-//        queryTypeMap.put("userCode", "neq");
-//        qc.setModelMap(modelMap);
-//        qc.setQueryTypeMap(queryTypeMap);
-
-//        List<Triple<String, String, String>> paramList = new ArrayList<>();
-//        Triple triple = new Triple<>("userCode", "admin", "neq");
-//        paramList.add(triple);
 
         qc = wapperQueryCondition(qc, new Triple<>("userCode", "admin", "neq"));
 
@@ -98,7 +82,7 @@ public class SysUserController extends KungfuController {
         paramValid(userId, 631, "userId");
         paramValid(isAllowLogin, 632, "isAllowLogin");
 
-        renderJson(sysUserService.setStatus(userId, isAllowLogin, getUserInfo()) ? R.ok("更新成功") : R.fail("更新失败"));
+        renderJson(sysUserService.setStatus(userId, isAllowLogin, getUserInfo()) ? R.ok("登录状态设置成功") : R.fail("登录状态设置失败"));
     }
 
     @ApiOperation(value = "给用户添加角色", notes = "给用户添加角色，支持单个及批量添加")

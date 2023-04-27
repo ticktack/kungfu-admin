@@ -29,9 +29,6 @@ public class SysUserValidator extends Validator {
                 if (StrKit.isBlank(sysUser.getUserName())) {
                     addError(KungfuConstant.MASSAGE, "SysUser对象属性userName不能为空");
                 }
-                if (StrKit.isBlank(sysUser.getPassword())) {
-                    addError(KungfuConstant.MASSAGE, "SysUser对象属性password不能为空");
-                }
                 if (StrKit.isBlank(sysUser.getOrgCode())) {
                     addError(KungfuConstant.MASSAGE, "SysUser对象属性orgCode不能为空");
                 }

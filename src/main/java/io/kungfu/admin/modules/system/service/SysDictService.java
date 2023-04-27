@@ -81,17 +81,17 @@ public class SysDictService extends KungfuService<SysDict> {
         List<String> dictCodes = Db.query("select dict_code from sys_dict where id in (?)",sysDictIds);
 
         if (Db.update("delete from sys_dict where id in (?)",sysDictIds) < 0 ) {
-            return R.fail(641, "删除字典数据失败");
+            return R.fail(641, "删除字典失败");
         }
 
         for (String dictCode : dictCodes) {
             if (Db.update("delete from sys_dict_item where dict_code=?", dictCode) < 0) {
-                return R.fail(642, "删除字典项数据失败");
+                return R.fail(642, "删除字典数据项失败");
             }
         }
 
         CacheKit.removeAll("sysDict");
 
-        return R.ok("删除字典数据成功");
+        return R.ok("删除字典成功");
     }
 }

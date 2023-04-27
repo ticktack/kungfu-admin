@@ -148,7 +148,7 @@ public class LogInterceptor  implements Interceptor {
         CompletableFuture.runAsync(() -> {
             try {
                 // 异步调用日志保存
-                log.setAddress(getAddress(ip));
+                //log.setAddress(getAddress(ip));
                 log.save();
             } catch (Exception e) {
                 throw new RuntimeException(e);
